@@ -24,6 +24,7 @@ order = []
 def on_before_hello_2(sender, ev):
     global result, order
     yield ev.wait_for("main-handler")
+    yield ev.wait_for("invalid-handler")
     order.append(('before-hello', 'outside'))
     result["before-hello-outside"] = ev
 
