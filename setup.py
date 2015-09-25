@@ -18,9 +18,9 @@ tests_require = [
     'yanc',
     'preggy',
     'tox',
-    'ipdb',
-    'coveralls',
-    'sphinx',
+    #'ipdb',
+    #'coveralls',
+    #'sphinx',
 ]
 
 setup(

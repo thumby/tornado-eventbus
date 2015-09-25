@@ -50,7 +50,7 @@ class TornadoEventBusTestCase(TestCase):
             @bus.subscribe("some-event", key="1")
             def test2(sender, ev):
                 pass
-        except RuntimeError, ex:
+        except RuntimeError as ex:
             expect(ex).to_be_an_error()
             expect(ex).to_have_an_error_message_of("Callback key 1 for event some-event is repeated.")
         else:

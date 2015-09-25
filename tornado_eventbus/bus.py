@@ -11,8 +11,16 @@
 
 from collections import defaultdict
 
-from tornado.gen import coroutine
-from tornado.locks import Condition
+try:
+    from tornado.gen import coroutine
+    from tornado.locks import Condition
+except ImportError:
+    print("Error importing tornado. Probably setup.py installing tornado_eventbus...")
+
+    def coroutine(func):
+        def handle(*args, **kw):
+            func()
+        return handle
 
 
 class EventData(object):
