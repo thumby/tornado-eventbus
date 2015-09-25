@@ -1,4 +1,4 @@
-# tornado-eventbus
+# tornado-eventbus [![Build Status](https://travis-ci.org/thumby/tornado-eventbus.svg?branch=master)](https://travis-ci.org/thumby/tornado-eventbus)
 Asynchronous event bus for tornado applications that integrates with tornado's IOLoop.
 
 # License
